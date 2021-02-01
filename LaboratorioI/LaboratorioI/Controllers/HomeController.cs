@@ -28,6 +28,16 @@ namespace LaboratorioI.Controllers
             return View();
         }
 
+        public IActionResult CreateCliente()
+        {
+            return View();
+        }
+
+        public IActionResult ViewCliente()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

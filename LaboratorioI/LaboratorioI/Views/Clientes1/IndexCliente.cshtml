@@ -1,0 +1,53 @@
+﻿@model IEnumerable<LaboratorioI.Models.ClienteModelo>
+
+@{
+    ViewData["Title"] = "IndexCliente";
+}
+
+<h1>IndexCliente</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nombreC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.apellidoC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefonoC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descripcionC)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombreC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.apellidoC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefonoC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descripcionC)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
