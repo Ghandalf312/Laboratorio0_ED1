@@ -11,6 +11,6 @@ namespace LaboratorioI.Models
         public string apellidoC { get; set; }
         public string telefonoC { get; set; }
         public string descripcionC { get; set; }
-        public List<Cliente> ClientesLista = new List<Cliente>();
+
     }
 }

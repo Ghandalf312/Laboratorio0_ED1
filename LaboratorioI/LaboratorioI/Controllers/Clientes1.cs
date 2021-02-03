@@ -1,4 +1,5 @@
 ﻿using LaboratorioI.Models;
+using LaboratorioI.Models.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace LaboratorioI.Controllers
         // GET: Clientes1
         public ActionResult Index()
         {
-            return View();
+            return View(Singleton.Instance.listaClientes);
         }
 
         // GET: Clientes1/Details/5
