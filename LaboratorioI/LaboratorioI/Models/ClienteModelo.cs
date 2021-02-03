@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace LaboratorioI.Models
 {
     public class ClienteModelo
     {
+        [Required]
         public string nombreC { get; set; }
         public string apellidoC { get; set; }
         public string telefonoC { get; set; }

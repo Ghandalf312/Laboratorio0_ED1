@@ -24,26 +24,9 @@ namespace LaboratorioI.Controllers
         }
 
         // GET: Clientes1/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create()
         {
-            try
-            {
-                var modeloCliente = new ClienteModelo
-                {
-                    nombreC = collection["nombre cliente"],
-                    apellidoC = collection["apellido cliente"],
-                    telefonoC = collection["telefono cliente"],
-                    descripcionC = collection["Descripcion cliente"]
-                };
-
-                //return RedirectToAction("Index");
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return View();
         }
 
         // POST: Clientes1/Create
@@ -53,6 +36,15 @@ namespace LaboratorioI.Controllers
         {
             try
             {
+                var nuevoCliente = new Models.ClienteModelo
+                {
+                    nombreC = collection["nombreC"],
+                    apellidoC = collection["apellidoC"],
+                    telefonoC = collection["telefonoC"],
+                    descripcionC = collection["descripcionC"]
+                };
+
+                Singleton.Instance.listaClientes.Add(nuevoCliente);
                 return RedirectToAction(nameof(Index));
             }
             catch
