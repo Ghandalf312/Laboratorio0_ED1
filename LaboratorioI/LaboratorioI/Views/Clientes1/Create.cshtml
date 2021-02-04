@@ -8,39 +8,56 @@
 
 <h4>ClienteModelo</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-md-4">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <div class="form-group">
-                <label asp-for="nombreC" class="control-label"></label>
-                <input asp-for="nombreC" class="form-control" />
-                <span asp-validation-for="nombreC" class="text-danger"></span>
+                @Html.LabelFor(model => model.nombreC, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.nombreC, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.nombreC, "", new { @class = "text-danger" })
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="apellidoC" class="control-label"></label>
-                <input asp-for="apellidoC" class="form-control" />
-                <span asp-validation-for="apellidoC" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="telefonoC" class="control-label"></label>
-                <input asp-for="telefonoC" class="form-control" />
-                <span asp-validation-for="telefonoC" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="descripcionC" class="control-label"></label>
-                <input asp-for="descripcionC" class="form-control" />
-                <span asp-validation-for="descripcionC" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
 
+            <div class="form-group">
+                @Html.LabelFor(model => model.apellidoC, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.apellidoC, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.apellidoC, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.telefonoC, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.telefonoC, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.telefonoC, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.descripcionC, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.descripcionC, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.descripcionC, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
 <div>
     <a asp-action="Index">Back to List</a>
+</div>
+<div>
+    @Html.ActionLink("Metodo de ordenamiento", "Ordenamiento")
 </div>
 
 @section Scripts {

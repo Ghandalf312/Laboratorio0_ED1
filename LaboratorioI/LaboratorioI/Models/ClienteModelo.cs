@@ -14,5 +14,6 @@ namespace LaboratorioI.Models
         public string telefonoC { get; set; }
         public string descripcionC { get; set; }
 
+        
     }
 }

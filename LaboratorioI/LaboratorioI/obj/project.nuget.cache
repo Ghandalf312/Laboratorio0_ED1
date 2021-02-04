@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xC4fBaQhF9LOzrGQjo58V/Xxb4JOWdHMC03T9P//l41FX6miIYew5qgoDqnoTnneRNepN1J/Tvk/PSzn7aL0Iw==",
+  "dgSpecHash": "qj2w8tRjr0WX/rouNJvKODyV9jiOYps3ZdQvxTEUYb+sWrfpOgEtrpbVHaReNwPeWZXqUPKq9G837ohTozBWLA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ZeroJChang\\Desktop\\U 1er ciclo 2021\\Estructura de datos\\Laboratorio I\\LaboratorioI\\LaboratorioI\\LaboratorioI.csproj",
+  "projectFilePath": "C:\\Users\\ZeroJChang\\Desktop\\U 1er ciclo 2021\\Estructura de datos\\Laboratorio0_ED1\\LaboratorioI\\LaboratorioI\\LaboratorioI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZeroJChang\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\ZeroJChang\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
