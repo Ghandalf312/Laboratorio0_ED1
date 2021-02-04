@@ -36,7 +36,7 @@ namespace LaboratorioI.Controllers
         {
             try
             {
-                var nuevoCliente = new Models.ClienteModelo
+                var nuevoCliente = new ClienteModelo
                 {
                     nombreC = collection["nombreC"],
                     apellidoC = collection["apellidoC"],
@@ -45,9 +45,8 @@ namespace LaboratorioI.Controllers
                 };
 
                 Singleton.Instance.listaClientes.Add(nuevoCliente);
+
                 return RedirectToAction(nameof(Index));
-
-
             }
 
             catch
@@ -62,7 +61,7 @@ namespace LaboratorioI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Ordenamiento(FormCollection collection)
+        public ActionResult Ordenamiento(IFormCollection collection)
         {
             try
             {
@@ -70,10 +69,10 @@ namespace LaboratorioI.Controllers
                 string eleccion = collection["tipoOrdenamiento"];
                 List<ClienteModelo> lista = Singleton.Instance.listaClientes;
 
-                if (eleccion.ToLower() == "nombreC")
+                if (eleccion.ToLower() == "nombre")
                 {
                     //ordenar por nombre
-                    //Storage.Instance.clientList.Sort((x, y) => x.nombre.CompareTo(y.nombre));
+                    //Singleton.Instance.listaClientes.Sort((x, y) => x.nombreC.CompareTo(y.nombreC));
                     for (int i = 0; i < lista.Count - 1; i++)
                     {
                         for (int j = 0; j < lista.Count - i - 1; j++)
@@ -91,7 +90,7 @@ namespace LaboratorioI.Controllers
                 else
                 {
                     //ordenar por apellido
-                    //Storage.Instance.clientList.Sort((x, y) => x.Apellido.CompareTo(y.Apellido));
+                    //Singleton.Instance.listaClientes.Sort((x, y) => x.apellidoC.CompareTo(y.apellidoC));
                     for (int i = 0; i < lista.Count - 1; i++)
                     {
                         for (int j = 0; j < lista.Count - i - 1; j++)
@@ -106,7 +105,7 @@ namespace LaboratorioI.Controllers
                     }
                     Singleton.Instance.listaClientes = lista;
                 }
-                return RedirectToAction("Index");
+                return RedirectToAction(nameof(Index));
             }
             catch
             {

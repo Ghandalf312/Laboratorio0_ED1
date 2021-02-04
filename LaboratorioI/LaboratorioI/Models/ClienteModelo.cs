@@ -10,6 +10,7 @@ namespace LaboratorioI.Models
     {
         [Required]
         public string nombreC { get; set; }
+        [Required]
         public string apellidoC { get; set; }
         public string telefonoC { get; set; }
         public string descripcionC { get; set; }

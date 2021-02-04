@@ -339,3 +339,4 @@ C:\Users\ZeroJChang\Desktop\U 1er ciclo 2021\Estructura de datos\Laboratorio0_ED
 C:\Users\ZeroJChang\Desktop\U 1er ciclo 2021\Estructura de datos\Laboratorio0_ED1\LaboratorioI\LaboratorioI\obj\Debug\netcoreapp3.1\LaboratorioI.pdb
 C:\Users\ZeroJChang\Desktop\U 1er ciclo 2021\Estructura de datos\Laboratorio0_ED1\LaboratorioI\LaboratorioI\obj\Debug\netcoreapp3.1\LaboratorioI.genruntimeconfig.cache
 C:\Users\ZeroJChang\Desktop\U 1er ciclo 2021\Estructura de datos\Laboratorio0_ED1\LaboratorioI\LaboratorioI\obj\Debug\netcoreapp3.1\Razor\Views\Clientes1\Ordenamiento.cshtml.g.cs
+C:\Users\Diego\Desktop\URL\Primer Ciclo 2021\Estructura de Datos I\Laboratorio\Laboratorio0_ED1\LaboratorioI\LaboratorioI\obj\Debug\netcoreapp3.1\Razor\Views\Clientes1\Ordenamiento.cshtml.g.cs
